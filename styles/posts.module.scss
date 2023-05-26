@@ -1,0 +1,28 @@
+.post {
+    div {
+        display: flex;
+
+        .tags {
+            text-transform: uppercase;
+            display: inline-block;
+            margin-right: 1rem;
+            background: #EEE;
+            padding: 0.5rem 2rem;
+            border-radius: 20px;
+        }
+    }
+
+    .comments {
+        display: flex;
+        flex-direction: column;
+
+        .singleComment {
+            p:first-of-type {
+                background: #EEE;
+                padding: 1rem;
+                margin-top: 1rem;
+                border-radius: 20px;
+            }
+        }
+    }
+}
