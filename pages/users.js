@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
-import NextLink from 'next/link';
+import Link from 'next/Link';
 
 export async function getStaticProps() {
     const res = await fetch('https://dummyjson.com/users');
@@ -25,7 +25,7 @@ export default function Home({ users }) {
                         {users.map((user, index) =>
                             <li key={index}>
                                 <h2>
-                                    <NextLink href={`/users/${user.id}`}>{user.firstName} {user.lastName}</NextLink>
+                                    <Link href={`/users/${user.id}`}>{user.firstName} {user.lastName}</Link>
                                 </h2>
                             </li>
                         )}

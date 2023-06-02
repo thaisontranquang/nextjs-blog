@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/layout.module.scss';
-import NextLink from 'next/link';
+import Link from 'next/Link';
 
 const name = 'Nom prénom';
 export const siteTitle = 'Exercice création de blog';
@@ -13,8 +13,8 @@ export default function Layout({ children, home }) {
             </Head>
 
             <div className={styles.backToHome}>
-                <NextLink href="/">All articles</NextLink>
-                <NextLink href="/users">Users</NextLink>
+                <Link href="/">All articles</Link>
+                <Link href="/users">Users</Link>
             </div>
             <main>{children}</main>
 
