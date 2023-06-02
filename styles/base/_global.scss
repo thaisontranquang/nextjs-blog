@@ -1,0 +1,35 @@
+:root {
+    font-size: 16px;
+}
+
+* {
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+}
+
+a:hover,
+a:visited,
+a:target,
+a:focus {
+    color: $color-primary;
+}
+
+.container {
+    margin: 2rem;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+}
+
+button {
+    background-color: $color-primary;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem auto;
+}

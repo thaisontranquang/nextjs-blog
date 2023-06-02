@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
-import Layout from '../../components/layout';
-import styles from '../../styles/posts.module.scss'
+import Layout from '../../components/layouts/layout';
+
 
 export async function getStaticPaths() {
     return {
@@ -46,27 +46,29 @@ export default function Post({ post, comments }) {
 
     return (
         <Layout>
-            <div className={styles.post}>
-                <h1>{post.title}</h1>
-                <p>{post.body}</p>
-                <div>
-                    {post.tags.map((item, index) => (
-                        <p className={styles.tags} key={index}>
-                            {post.tags[index]}
-                        </p>
-                    ))}
-                </div>
-                <div className={styles.comments}>
-                    {comments.comments.map((item, index) => (
-                        <p className={styles.singleComment} key={index}>
-                            <p>
-                                {item.body}
+            <div className="container">
+                <div className="post">
+                    <h1>{post.title}</h1>
+                    <p>{post.body}</p>
+                    <div>
+                        {post.tags.map((item, index) => (
+                            <p className="tags" key={index}>
+                                {post.tags[index]}
                             </p>
-                            <p>
-                                by {item.user.username}
+                        ))}
+                    </div>
+                    <div className="comments">
+                        {comments.comments.map((item, index) => (
+                            <p className="singleComment" key={index}>
+                                <p>
+                                    {item.body}
+                                </p>
+                                <p>
+                                    by {item.user.username}
+                                </p>
                             </p>
-                        </p>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </Layout>

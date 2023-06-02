@@ -2,13 +2,12 @@
     div {
         display: flex;
 
-        .tags {
+        p.tags {
             text-transform: uppercase;
             display: inline-block;
-            margin-right: 1rem;
-            background: #EEE;
+            background: #e4e4e4;
+            margin-right: 0.5rem;
             padding: 0.5rem 2rem;
-            border-radius: 20px;
         }
     }
 

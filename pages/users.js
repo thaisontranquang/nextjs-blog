@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
+import Layout, { siteTitle } from '../components/layouts/layout';
 import Link from 'next/Link';
 
 export async function getStaticProps() {
@@ -19,7 +19,7 @@ export default function Home({ users }) {
                 <title>{siteTitle}</title>
             </Head>
             {
-                <section>
+                <section className="container">
                     <h1>List of users</h1>
                     <ul>
                         {users.map((user, index) =>
