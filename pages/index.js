@@ -3,6 +3,7 @@ import Layout, { siteTitle } from '../components/layout';
 import AllPosts from '../components/allPosts';
 import React from 'react';
 
+
 export async function getStaticProps() {
   const res = await fetch('https://dummyjson.com/posts');
   const posts = await res.json();
