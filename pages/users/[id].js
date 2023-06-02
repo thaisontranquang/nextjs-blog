@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Layout from '../../components/layout';
-import Link from 'next/Link';
+import NextLink from 'next/link';
 import styles from '../../styles/cards.module.scss'
 
 export async function getStaticPaths() {
@@ -41,9 +41,9 @@ export default function UserPosts({ user, allPosts }) {
                 <h1>{user.firstName} {user.lastName}</h1>
                 {allPosts.posts.map((item, index) => (
                     <div className={styles.card} key={index}>
-                        <Link href={`../posts/${item.id}`}>
+                        <NextLink href={`../posts/${item.id}`}>
                             {item.title}
-                        </Link>
+                        </NextLink>
                         <p>
                             {item.body}
                         </p>

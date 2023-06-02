@@ -1,9 +1,6 @@
 import React from 'react';
-import Link from 'next/Link';
 import { useState, useEffect, useRef } from 'react'
 import styles from '../styles/cards.module.scss'
-
-
 
 export default function AllPosts({ posts }) {
 
