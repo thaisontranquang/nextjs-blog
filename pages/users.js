@@ -19,7 +19,7 @@ export default function Home({ users }) {
                 <title>{siteTitle}</title>
             </Head>
             {
-                <section className="container">
+                <section className="container listUsers">
                     <h1>List of users</h1>
                     <ul>
                         {users.map((user, index) =>

@@ -23,7 +23,7 @@ export default function Home({ posts }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <div>
+      <div className='container'>
         <p>Hello</p>
       </div>
     </Layout>

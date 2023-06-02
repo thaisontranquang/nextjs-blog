@@ -36,13 +36,15 @@ export default function UserPosts({ user, allPosts }) {
 
     return (
         <Layout>
-            <div className="user">
+            <div className="user container">
                 <h1>{user.firstName} {user.lastName}</h1>
                 {allPosts.posts.map((item, index) => (
                     <div className="card" key={index}>
-                        <Link href={`../posts/${item.id}`}>
-                            {item.title}
-                        </Link>
+                        <h2>
+                            <Link href={`../posts/${item.id}`}>
+                                {item.title}
+                            </Link>
+                        </h2>
                         <p>
                             {item.body}
                         </p>
