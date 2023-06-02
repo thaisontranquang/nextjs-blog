@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layouts/layout';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 export async function getStaticProps() {
     const res = await fetch('https://dummyjson.com/users');
