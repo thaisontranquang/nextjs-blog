@@ -39,7 +39,7 @@ export default function UserPosts({ user, allPosts }) {
             <div className="user">
                 <h1>{user.firstName} {user.lastName}</h1>
                 {allPosts.posts.map((item, index) => (
-                    <div className={styles.card} key={index}>
+                    <div className="card" key={index}>
                         <Link href={`../posts/${item.id}`}>
                             {item.title}
                         </Link>
