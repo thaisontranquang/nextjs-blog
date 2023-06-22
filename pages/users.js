@@ -20,7 +20,7 @@ export default function Home({ users }) {
             </Head>
             {
                 <section className="container listUsers">
-                    <h1>List of users</h1>
+                    <h1>List of authors</h1>
                     <ul>
                         {users.map((user, index) =>
                             <li key={index}>

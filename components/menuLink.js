@@ -5,7 +5,7 @@ export default function MenuLink() {
         <div>
             <Link href="/">Home</Link>
             <Link href="/posts/allPosts">All articles</Link>
-            <Link href="/users">Users</Link>
+            <Link href="/users">Authors</Link>
         </div>
     )
 }

@@ -1,0 +1,58 @@
+.show_post {
+    .container {
+        max-width: 40rem;
+        margin: 2rem auto;
+
+        .card {
+            margin: 1rem auto;
+            flex-basis: 45%;
+            padding: 1.5rem;
+            text-align: left;
+            color: inherit;
+            text-decoration: none;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            transition: color 0.15s ease, border-color 0.15s ease;
+            background: #EEE;
+
+            h3 {
+                margin: 0 0 1rem 0;
+                font-size: 1.5rem;
+            }
+
+            p {
+                margin: 0;
+                font-size: 1rem;
+                line-height: 1.3;
+            }
+
+            p.tags {
+                text-transform: uppercase;
+                display: inline-block;
+                background: #e4e4e4;
+                margin: 1rem 0.5rem 0 0;
+                padding: 0.5rem 2rem;
+            }
+        }
+
+        .comments {
+            display: flex;
+            flex-direction: column;
+
+            .comment {
+                p:first-of-type {
+                    background: #EEE;
+                    padding: 1rem;
+                    margin-top: 1rem;
+                    border-radius: 10px;
+                }
+
+                p:last-of-type {
+                    margin-top: -0.5rem;
+                    border-radius: 10px;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

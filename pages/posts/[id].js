@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import Layout from '../../components/layouts/layout';
+import Link from 'next/link';
 
 
 export async function getStaticPaths() {
@@ -46,27 +47,33 @@ export default function Post({ post, comments }) {
 
     return (
         <Layout>
-            <div className="container">
-                <div className="post">
-                    <h1>{post.title}</h1>
-                    <p>{post.body}</p>
-                    <div>
-                        {post.tags.map((item, index) => (
-                            <p className="tags" key={index}>
-                                {post.tags[index]}
-                            </p>
-                        ))}
+            <div className="show_post">
+                <div className="container">
+                    <div className="card">
+                        <h1>{post.title}</h1>
+                        <p>{post.body}</p>
+                        <br />
+                        <p>
+                            Written by <Link href={`/users/${post.userId}`}>{post.userId}</Link>
+                        </p>
+                        <div>
+                            {post.tags.map((item, index) => (
+                                <p className="tags" key={index}>
+                                    {post.tags[index]}
+                                </p>
+                            ))}
+                        </div>
                     </div>
                     <div className="comments">
                         {comments.comments.map((item, index) => (
-                            <p className="singleComment" key={index}>
+                            <div className="comment" key={index}>
                                 <p>
                                     {item.body}
                                 </p>
                                 <p>
                                     by {item.user.username}
                                 </p>
-                            </p>
+                            </div>
                         ))}
                     </div>
                 </div>

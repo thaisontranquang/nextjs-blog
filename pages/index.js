@@ -15,6 +15,7 @@ export async function getStaticProps() {
   }
 }
 
+
 export default function Home({ posts }) {
   console.log(posts);
 
@@ -24,7 +25,8 @@ export default function Home({ posts }) {
         <title>{siteTitle}</title>
       </Head>
       <div className='container'>
-        <p>Hello</p>
+        <p>Hello and welcome to this blog !</p>
+        <p>I made it using Next.js and React. This was my very first project using these frameworks ! </p>
       </div>
     </Layout>
   );
